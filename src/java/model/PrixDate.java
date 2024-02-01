@@ -76,6 +76,7 @@ public class PrixDate {
             prepare.setDate(3, this.getDates());
             int trait = prepare.executeUpdate();
         }
+        connexion.close();
     }
 
     public PrixDate[] select(Connection connexion) throws SQLException{
@@ -91,6 +92,7 @@ public class PrixDate {
             PrixDate rep = new PrixDate(prixD, idMat, prixx, d);
             array.add(rep);
         }
+        connexion.close();
         return array.toArray(new PrixDate[array.size()]);
     }
     

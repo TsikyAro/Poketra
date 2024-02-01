@@ -8,6 +8,7 @@
  <%@ include file="header.jsp" %>
 <body>
     <%@ include file="nav.jsp" %>
+    <main id="main" class="main">
     <% if(request.getAttribute("erreur")!=null){%>
         <%
           String erreur = (String)request.getAttribute("erreur");  
@@ -43,6 +44,7 @@
             </tbody>
         </table>
     </div>
+    </main>
     <%@ include file="footer.jsp" %>
 </body>
 </html>

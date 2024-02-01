@@ -67,6 +67,7 @@ public class PoketraPrix {
             prepare.setDouble(2, this.getPrixPoketra());
             int trait = prepare.executeUpdate();
         }
+        connexion.close();
     }
 
     public PoketraPrix select_byId(Connection connexion,int idpoketra) throws SQLException{
@@ -78,6 +79,7 @@ public class PoketraPrix {
             PoketraPrix type = new PoketraPrix(result.getInt("idPoketra_Prix"), result.getInt("idPoketra"), result.getDouble("prix_Poketra"));
             return type;
         }
+        connexion.close();
         return null;
     }
     public PoketraPrix[] select(Connection connexion) throws SQLException{
@@ -89,6 +91,7 @@ public class PoketraPrix {
             PoketraPrix type = new PoketraPrix(result.getInt("idPoketra_Prix"), result.getInt("idPoketra"), result.getDouble("prixPoketra"));
             array.add(type);
         }
+        connexion.close();
         return array.toArray(new PoketraPrix[array.size()]);
     }
     

@@ -1,7 +1,7 @@
 <%@include file="header.jsp"%>
 <body>
   <%@ include file="nav.jsp" %>
-
+<main id="main" class="main">
 <div class="content">
     <h1>Insertion Nouveau Personne</h1>
     <form action="PersonneController" method="post">
@@ -11,6 +11,7 @@
         <input type="submit" value="Envoyer">
     </form>
 </div>
+</main>
     <style>
         body {
             font-family: Arial, sans-serif;

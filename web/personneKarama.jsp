@@ -6,6 +6,7 @@ Personne[] personne = (Personne[])request.getAttribute("personne");
 <%@include file="header.jsp"%>
 <body>
   <%@ include file="nav.jsp" %>
+  <main id="main" class="main">
     <form action="PoketraKaramaControleur" method="post">
         <h1>Insertion Karama</h1>
         <p><SELECT placeholder="personne" name="personne">
@@ -16,6 +17,7 @@ Personne[] personne = (Personne[])request.getAttribute("personne");
         <p><input type="text" name="karama"></p>
         <input type="submit" value="OK">
     </form>
+  </main>
     <%@ include file="footer.jsp" %>
 </body>
 <style>

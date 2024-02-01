@@ -66,6 +66,7 @@ public class PersonneKarama {
             prepare.setDouble(2, this.getKarama());
             int trait = prepare.executeUpdate();
         }
+        connexion.close();
     }
     public  PersonneKarama[] select(Connection connexion) throws SQLException{
         String requete = "select * from Personne_Karama";
@@ -79,6 +80,7 @@ public class PersonneKarama {
             PersonneKarama personneKarama = new PersonneKarama(idPersonne_Karama , idPersonne ,karama);
             array.add(personneKarama);
         }
+        connexion.close();
         return array.toArray(new PersonneKarama[array.size()]);
     }
 }

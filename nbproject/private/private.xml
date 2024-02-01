@@ -6,63 +6,50 @@
             <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/Benefice.jsp</file>
             <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/database/nouveauScript.sql</file>
             <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/listePOketra.jsp</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/index.jsp</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/model/PoketraMaker.java</file>
             <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/ListeEmploye.jsp</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/controleur/PrixVenteController.java</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/controleur/SalairePosteControlleur.java</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/controleur/controle.java</file>
+            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/model/Panier.java</file>
+            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/model/Poste.java</file>
+            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/model/Vente.java</file>
+            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/listMatiere.jsp</file>
+            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/genre.jsp</file>
+            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/model/PoketraMatiere.java</file>
+            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/nav.jsp</file>
+            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/controleur/VenteControleur.java</file>
             <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/PoketraMaker.jsp</file>
             <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/PrixPoketra.jsp</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/model/PersonnePoste.java</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/controleur/PoketraMatiereController.java</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/model/Liste_fin.java</file>
+            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/PrixVentePoketra.jsp</file>
+            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/model/Employe.java</file>
+            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/model/V_reste_poketra.java</file>
+            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/insertionStock.jsp</file>
+            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/client.jsp</file>
+            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/liste.jsp</file>
+            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/statistique.jsp</file>
             <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/model/Poketra.java</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/footer.jsp</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/model/SalairePoste.java</file>
+            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/model/ProduitAchat.java</file>
             <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/model/Benefice.java</file>
             <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/Personne.jsp</file>
+            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/controleur/BeneficeController.java</file>
             <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/poketraMatiere.jsp</file>
+            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/model/Fabrication.java</file>
+            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/Salaire.jsp</file>
+            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/vente.jsp</file>
             <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/personneKarama.jsp</file>
             <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/fabricationPoketra.jsp</file>
             <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/insertionTaille.jsp</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/creerPoketra.jsp</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/poste.jsp</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/erreur.jsp</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/controleur/PoketraMakerControlleur.java</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/controleur/LookControleur.java</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/controleur/PosteControlleur.java</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/insertionType.jsp</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/model/Personne.java</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/model/Poste.java</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/controleur/ListeFinale.java</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/listMatiere.jsp</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/model/PoketraMatiere.java</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/nav.jsp</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/PrixVentePoketra.jsp</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/controleur/TailleController.java</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/controleur/PersonneController.java</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/insertionStock.jsp</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/controleur/PoketraKaramaControleur.java</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/liste.jsp</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/model/PoketraPrix.java</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/controleur/LookMatiereControleur.java</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/main/Main.java</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/controleur/TriePrix.java</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/controleur/BeneficeController.java</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/navbar.html</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/model/Connexion.java</file>
+            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/listeVente.jsp</file>
             <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/MatiereEnStock.jsp</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/model/PrixPoketra.java</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/WEB-INF/web.xml</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/controleur/MatiereControleur.java</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/salairePoste.jsp</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/controleur/PersonnePosteControleur.java</file>
+            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/ResteStock.jsp</file>
+            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/poste.jsp</file>
+            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/creerPoketra.jsp</file>
+            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/controleur/ValiderController.java</file>
             <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/insertionPrix.jsp</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/controleur/TrieControleur.java</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/controleur/PirxControleur.java</file>
-            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/model/PersonneKarama.java</file>
+            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/controleur/StatistiqueController.java</file>
+            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/afficheliste.jsp</file>
+            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/controleur/Reste_poketra.java</file>
+            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/EMploye.jsp</file>
+            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/insertionType.jsp</file>
             <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/src/java/database/script.sql</file>
+            <file>file:/D:/ITU/s5/Mme%20Baovola/Poketra/web/insertionLook.jsp</file>
         </group>
     </open-files>
 </project-private>

@@ -114,6 +114,7 @@ create table Poketra_Maker(
     idPoketra_Maker serial PRIMARY key,
     idPoketra int REFERENCES Poketra(idPoketra),
     idPersonne int REFERENCES Personne(idPersonne),
+    idFabrication   int REFERENCES fabrication(idfabrication),
     dure double precision
 );
 
@@ -137,3 +138,11 @@ on
  pok.idPersonne = pers.idPersonne;
 
 select idpoketra,sum(durekarama) from poketramakerprix group by idpoketra; 
+
+
+-- Maka date Max ao amle poste --
+create view PosteMaxDate as
+ select * from poste p where date =(select max(date) from poste po where p.nom=po.nom);  
+
+create view SalairePoste as
+select *,(karama* (select salaire from salaire order by idsalaire desc limit 1)) salaire from posteMaxDate; 

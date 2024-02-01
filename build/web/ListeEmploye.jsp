@@ -1,11 +1,12 @@
 <%@page import="model.*"%>
 <%
-    Liste_fin[] lm = (Liste_fin[])request.getAttribute("finale"); 
+    Employe[] lm = (Employe[])request.getAttribute("employe"); 
  %>
 
  <%@include file="header.jsp"%>
  <body>
    <%@ include file="nav.jsp" %>
+   <main id="main" class="main">
     
     <div id="div">
         <table>
@@ -13,14 +14,16 @@
                 <th>Nom Personne</th>
                 <th>Poste</th>
                 <th>Salaire</th>
+                <th>Date d'embauche</th>
             </thead>
             <tbody>
                 <%  if(lm!=null){
                     for(int i=0 ; i< lm.length ; i++){%>
                 <tr>
-                    <td><%= lm[i].getNompersonne() %></td>
-                    <td><%= lm[i].getNomposte() %></td>
-                    <td><%= lm[i].getSalaire() %></td>
+                    <td><%= lm[i].getNomPersonne() %></td>
+                    <td><%= lm[i].getPoste().getNomPoste() %></td>
+                    <td><%= lm[i].getPoste().getSalaire() %></td>
+                    <td><%= lm[i].getDate() %></td>
                 </tr>
                 <% }
                 } %>
@@ -28,6 +31,7 @@
             </tbody>
         </table>
     </div>
+   </main>
     <%@ include file="footer.jsp" %>
 </body>
 <style>

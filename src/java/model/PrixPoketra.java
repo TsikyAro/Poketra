@@ -133,6 +133,7 @@ public class PrixPoketra {
             PrixPoketra pketra = new PrixPoketra(prix,nomtype,nomtaille);
             array.add(pketra);
         }
+        connexion.close();
         return array.toArray(new PrixPoketra[array.size()]);
     }
     
@@ -150,6 +151,7 @@ public class PrixPoketra {
             PrixPoketra pketra = new PrixPoketra(prix,nomtype,nomtaille);
             array.add(pketra);
         }
+        connexion.close();
         return array.toArray(new PrixPoketra[array.size()]);
     }
     

@@ -20,13 +20,26 @@ public class EtatdeStock {
     double valeur ;
     int IdMatiere;
     String nomMatiere;
-    public void insert(Connection connexion) throws SQLException{
-        String requete = "insert into Fabrication (idPoketraMatiere, Quantite) values(?, ?)";
-        try (PreparedStatement prepare = connexion.prepareStatement(requete)) {
-            prepare.setDouble(1, this.getValeur());
-            prepare.setInt(2, this.getIdMatiere());
-            int trait = prepare.executeUpdate();
+//    public void insert(Connection connexion) throws SQLException{
+//        String requete = "insert into Fabrication (idPoketraMatiere, Quantite) values(?, ?)";
+//        try (PreparedStatement prepare = connexion.prepareStatement(requete)) {
+//            prepare.setDouble(1, this.getValeur());
+//            prepare.setInt(2, this.getIdMatiere());
+//            int trait = prepare.executeUpdate();
+//        }
+//        connexion.close();
+//    }
+    
+    public EtatdeStock etatParPoketra(Connection connexion,int idPoketra) throws SQLException{
+        String requete = "select * from etat_de_stockFab where idPoketra ="+idPoketra;
+        Statement stat = connexion.createStatement();
+        ResultSet result = stat.executeQuery(requete);
+        if(result.next()){
+            EtatdeStock etat = new EtatdeStock(result.getDouble(1), result.getInt(2));
+            return etat;
         }
+        connexion.close();
+        return new EtatdeStock();
     }
     
     public EtatdeStock etatParMatiere(Connection connexion,int idmatiere) throws SQLException{
@@ -37,6 +50,7 @@ public class EtatdeStock {
             EtatdeStock etat = new EtatdeStock(result.getDouble(1), result.getInt(2));
             return etat;
         }
+        connexion.close();
         return new EtatdeStock();
     }
     public EtatdeStock[] etatParStockparMatiere(Connection connexion,int idmatiere) throws SQLException{
@@ -48,6 +62,7 @@ public class EtatdeStock {
             EtatdeStock etat = new EtatdeStock(result.getDouble(1), result.getInt(2),result.getString(3));
             liste.add(etat);
         }
+        connexion.close();
         return liste.toArray(new EtatdeStock[liste.size()]);
     }
     public EtatdeStock [] etatParStock(Connection connexion) throws SQLException{
@@ -59,6 +74,7 @@ public class EtatdeStock {
             EtatdeStock etat = new EtatdeStock(result.getDouble(1), result.getInt(2),result.getString(3));
             liste.add(etat);
         }
+        connexion.close();
         return liste.toArray(new EtatdeStock[liste.size()]);
     }
     

@@ -24,26 +24,7 @@ public class Personne {
     String NomPersonne;
     String tache;
     
-    public void UpdatePoste(Date omena ,  PersonnePoste[] all , Connection connect) throws SQLException{
-        for(int a=0 ; a<all.length ; a++ ){
-            int idPoste = 1;
-            int intervale_date = this. CalculDate(all[a].getDebut() , omena );
-            if(intervale_date >= 2){
-//                int idPoste = // selectPosteHierachie(2);
-            }
-            else if(intervale_date >=3 ){
-//                int idPoste = // selectPosteHierachie(3);
-            }
 
-            all[a].setFin(omena);
-            all[a].Update(connect);
-            all[a].setIdPoste(idPoste);
-            all[a].setDebut(omena);
-            all[a].insert(connect);
-        }
-    }
-
-    
     public int CalculDate(Date debut,Date omena){
          int differenceAnnees = differenceEnAnnees(debut, omena);
          return differenceAnnees;
@@ -59,7 +40,7 @@ public class Personne {
     }
 
     // Fonction pour calculer la différence en années entre deux dates
-    private static int differenceEnAnnees(java.util.Date date1, java.util.Date date2) {
+    public static int differenceEnAnnees(java.util.Date date1, java.util.Date date2) {
         long differenceEnMillis = date2.getTime() - date1.getTime();
         long differenceEnJours = differenceEnMillis / (24 * 60 * 60 * 1000);
         return (int) (differenceEnJours / 365);
@@ -109,6 +90,7 @@ public class Personne {
             prepare.setString(2, this.getTache());
             int trait = prepare.executeUpdate();
         }
+        connexion.close();
     }
     public  Personne[] select(Connection connexion) throws SQLException{
         String requete = "select * from personne";
@@ -122,6 +104,7 @@ public class Personne {
             Personne personne = new Personne(idPersonne , NomPersonne ,Tache);
             array.add(personne);
         }
+        connexion.close();
         return array.toArray(new Personne[array.size()]);
     }
 }

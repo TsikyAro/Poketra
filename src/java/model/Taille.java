@@ -52,6 +52,7 @@ public class Taille {
             prepare.setString(1, this.getNomTaille());
             int trait = prepare.executeUpdate();
         }
+        connexion.close();
     }
     
     public Taille[] select(Connection connexion) throws SQLException{
@@ -65,6 +66,7 @@ public class Taille {
             Taille m = new Taille(id, nom);
             array.add(m);
         }
+        connexion.close();
         return array.toArray(new Taille[array.size()]);
     }
 }

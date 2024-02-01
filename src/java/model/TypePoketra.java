@@ -50,6 +50,7 @@ public class TypePoketra {
             prepare.setString(1, this.getNomType());
             int trait = prepare.executeUpdate();
         }
+        connexion.close();
     }
      
     public TypePoketra[] select(Connection connexion) throws SQLException{
@@ -63,6 +64,7 @@ public class TypePoketra {
             TypePoketra type = new TypePoketra(id, nom);
             array.add(type);
         }
+        connexion.close();
         return array.toArray(new TypePoketra[array.size()]);
     }
     

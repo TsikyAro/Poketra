@@ -7,6 +7,7 @@ Matiere[] matieres = (Matiere[])request.getAttribute("matieres");
 <%@include file="header.jsp"%>
 <body>
   <%@ include file="nav.jsp" %>
+  <main id="main" class="main">
     <form action="PirxControleur" method="post">
         <h1>Insertion Prix</h1>
         <p><SELECT placeholder="Matiere" name="idMatiere">
@@ -14,10 +15,11 @@ Matiere[] matieres = (Matiere[])request.getAttribute("matieres");
             <option value="<%= matieres[i].getIdMatiere() %>"><%= matieres[i].getNomMatiere() %></option>
             <%} %>
         </SELECT></p>
-        <input type="text" name="prix">
+        <input type="text" name="prix" placeholder="Prix Matiere Premiere">
         <input type="date" name="date">
         <input type="submit" value="OK">
     </form>
+  </main>
     <%@ include file="footer.jsp" %>
 </body>
 <style>

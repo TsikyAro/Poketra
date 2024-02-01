@@ -7,6 +7,7 @@ Matiere[] matieres = (Matiere[])request.getAttribute("matieres");
 <%@include file="header.jsp"%>
 <body>
   <%@ include file="nav.jsp" %>
+  <main id="main" class="main">
     <form action="LookMatiereControleur" method="post">
         <h1>Insertion Matiere/Look</h1>
         <p><SELECT placeholder="Matiere" name="matiere">
@@ -21,6 +22,7 @@ Matiere[] matieres = (Matiere[])request.getAttribute("matieres");
         </SELECT></p>
         <input type="submit" value="OK">
     </form>
+  </main>
     <%@ include file="footer.jsp" %>
 </body>
 <style>

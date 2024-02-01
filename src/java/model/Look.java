@@ -51,6 +51,7 @@ public class Look {
             prepare.setString(1, this.getNomLook());
             int trait = prepare.executeUpdate();
         }
+        connexion.close();
     }
     
     public Look[] select(Connection connexion) throws SQLException{
@@ -64,6 +65,7 @@ public class Look {
             Look l = new Look(id, nom);
             array.add(l);
         }
+        connexion.close();
         return array.toArray(new Look[array.size()]);
     }
     

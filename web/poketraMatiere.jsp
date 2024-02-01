@@ -10,6 +10,7 @@
 <%@include file="header.jsp"%>
 <body>
   <%@ include file="nav.jsp" %>
+  <main id="main" class="main">
     <form action="PoketraMatiereController" method="post">
         <h1>Creation Poketra : <%=poketra.getNomType()%> de taille <%= poketra.getNomTaille()%></h1>
         <input type="hidden" value="<%= poketra.getIdPoketra()%>" name="poketra">
@@ -40,6 +41,7 @@
         </table>
     </div>
             <a href="index.jsp" >Terminer</a>
+  </main>
             <%@ include file="footer.jsp" %>
 </body>
 <style>

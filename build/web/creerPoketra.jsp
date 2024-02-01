@@ -10,6 +10,7 @@ Matiere[] matieres = (Matiere[]) request.getAttribute("matiere");
 <%@ include file="header.jsp" %>
 <body>
     <%@ include file="nav.jsp" %>
+    <main id="main" class="main">
     <form action="PoketraController" method="post">
         <h1>Creation Poketra</h1>
          <p><SELECT placeholder="Type" name="tp">
@@ -25,6 +26,7 @@ Matiere[] matieres = (Matiere[]) request.getAttribute("matiere");
        
         <input type="submit" value="OK">
     </form>
+    </main>
     <%@ include file="footer.jsp" %>
 </body>
 <style>

@@ -59,6 +59,7 @@ public class Duree {
             prepare.setDouble(3, this.getDuree());
             int trait = prepare.executeUpdate();
         }
+        connexion.close();
     }
     
     public Duree[] select(Connection connexion) throws SQLException{
@@ -73,6 +74,7 @@ public class Duree {
             Duree duree = new Duree(id, poketra, valeur);
             array.add(duree);
         }
+        connexion.close();
         return array.toArray(new Duree[array.size()]);
     }
     

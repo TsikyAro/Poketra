@@ -12,7 +12,9 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.sql.Connection;
 import model.Connexion;
+import model.Fabrication;
 import model.Personne;
 import model.Poketra;
 import model.PoketraMaker;
@@ -65,9 +67,12 @@ public class PoketraMakerControlleur extends HttpServlet {
         try{
         Poketra[] poketra = new Poketra().selectName(Connexion.connect());
         Personne[] personne = new Personne().select(Connexion.connect());
+        Fabrication[] farbication = new Fabrication().select(Connexion.connect());
         out.println(personne.length);
         request.setAttribute("poketra", poketra);
-        request.setAttribute("personnes", personne);   
+        request.setAttribute("personnes", personne); 
+        request.setAttribute("fabrication", farbication);   
+//             out.println(farbication.length);
         }
         catch(Exception ex){
             ex.printStackTrace();
@@ -92,9 +97,10 @@ public class PoketraMakerControlleur extends HttpServlet {
         String poketra = request.getParameter("poketra");
         String duree = request.getParameter("duree");
         String personne = request.getParameter("personne");
+        int idFabrication =Integer.valueOf(request.getParameter("fabrication"));
         
         try{
-            PoketraMaker poketraMaker = new PoketraMaker(Integer.valueOf(poketra), Integer.valueOf(personne), Double.parseDouble(duree));
+            PoketraMaker poketraMaker = new PoketraMaker(Integer.valueOf(poketra), Integer.valueOf(personne), Double.parseDouble(duree),idFabrication);
             poketraMaker.insert(Connexion.connect());
         }
         catch(Exception ex){

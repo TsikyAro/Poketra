@@ -15,6 +15,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.sql.Date;
 import model.Connexion;
 import model.Poste;
 
@@ -49,32 +50,24 @@ public class PosteControlleur extends HttpServlet {
             out.println("</html>");
         }
     }
-
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        PrintWriter out = response.getWriter();
         String nomPoste = request.getParameter("nomPoste");
-        String hierarchie = request.getParameter("hierarchie");
-        Poste poste = new Poste( nomPoste, Integer.valueOf(hierarchie));
+        int anne = Integer.valueOf(request.getParameter("annes"));
+        int karama =Integer.valueOf(request.getParameter("karama"));
+        Date date = Date.valueOf(request.getParameter("date"));
+        Poste poste = new Poste( nomPoste,anne,karama,date);
+        
         try {
             poste.insert(Connexion.connect());
-        } catch (SQLException ex) {
-            Logger.getLogger(PosteControlleur.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(PosteControlleur.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        RequestDispatcher dispache = request.getRequestDispatcher("index.jsp");
-        dispache.forward(request, response);        
-        processRequest(request, response);
+            RequestDispatcher dispache = request.getRequestDispatcher("index.jsp");
+            dispache.forward(request, response);  
+        } catch (Exception ex) {
+            ex.printStackTrace(out);
+        } 
+        
     }
 
     /**

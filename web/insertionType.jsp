@@ -1,11 +1,13 @@
 <%@include file="header.jsp"%>
 <body>
   <%@ include file="nav.jsp" %>
+  <main id="main" class="main">
     <h1>Insertion Type</h1>
     <form action="TypeController" method="post">
         <p><input type="text" aria-placeholder="NomMatiere" name="nomType"></p>
         <input type="submit" value="Envoyer">
     </form>
+  </main>
 </body>
 <%@ include file="footer.jsp" %>
 <style>

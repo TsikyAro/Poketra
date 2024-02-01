@@ -6,7 +6,7 @@
  <%@include file="header.jsp"%>
  <body>
    <%@ include file="nav.jsp" %>
-    
+    <main id="main" class="main">
     <div id="div">
         <table>
             <thead>
@@ -28,6 +28,7 @@
             </tbody>
         </table>
     </div>
+    </main>
     <%@ include file="footer.jsp" %>
 </body>
 <style>

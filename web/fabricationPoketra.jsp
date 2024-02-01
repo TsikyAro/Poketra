@@ -7,17 +7,20 @@ PoketraMatiere[] poketraMatiere = (PoketraMatiere[]) request.getAttribute("poket
 
 <body>
     <%@ include file="nav.jsp" %>
+    <main id="main" class="main">
     <form action="FabricationControleur" method="post">
-        <h1>Creation Poketra</h1>
+        <h1>Fabrication Poketra</h1>
          <p><SELECT placeholder="Type" name="poketraMatiere">
         <% for(int i =0 ;i<  poketraMatiere.length ; i++) {%>
         <option value="<%=poketraMatiere [i].getIdPoketra()%>"><%= poketraMatiere[i].getNomMatiere()%></option>
         <%} %>
         </SELECT></p>
-        <p><input type="text" name="quantite"></p>
+        <p><input type="text" name="quantite" placeholder="Quantite"></p>
+        <p><input type="date" name="date"></p>
        
         <input type="submit" value="OK">
     </form>
+    </main>
     <%@ include file="footer.jsp" %>
 </body>
 <style>

@@ -10,7 +10,7 @@
             <h5 class="card-title">Insertion  Look</h5>
 
             <!-- Floating Labels Form -->
-            <form class="row g-3"action="../LookControleur" method="post" >
+            <form class="row g-3"action="LookControleur" method="post" >
               <div class="col-md-12">
                 <div class="form-floating">
                   <input type="text" class="form-control" id="floatingName" name="nomMatiere">

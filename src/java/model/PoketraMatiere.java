@@ -1,6 +1,7 @@
 package model;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -85,7 +86,7 @@ public class PoketraMatiere {
         return array.toArray(new PoketraMatiere[array.size()]);
     }
         
-        public MatiereEnStock[] Verifier_stock_par_poketra(PoketraMatiere [] poketraMatiere,double quantite) throws Exception{
+        public MatiereEnStock[] Verifier_stock_par_poketra(PoketraMatiere [] poketraMatiere,double quantite,Date dates) throws Exception{
             ArrayList<MatiereEnStock> matireStock = new ArrayList<MatiereEnStock>();
             for(int i=0;i<poketraMatiere.length;i++){
                 this.checkStock(poketraMatiere, poketraMatiere[i].getIdMatiere(), quantite);
@@ -101,7 +102,7 @@ public class PoketraMatiere {
                     }
                 }
             }
-            Fabrication fab = new Fabrication(poketraMatiere[0].getIdPoketra(),quantite);
+            Fabrication fab = new Fabrication(poketraMatiere[0].getIdPoketra(),quantite,dates);
             fab.insert(Connexion.connect());
             return matireStock.toArray(new MatiereEnStock[matireStock.size()]);
         }

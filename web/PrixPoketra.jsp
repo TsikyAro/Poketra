@@ -10,6 +10,7 @@
  <%@include file="header.jsp"%>
  <body>
    <%@ include file="nav.jsp" %>
+    <main id="main" class="main">
     <form action="TriePrix" method="post">
         <h1>Trier par prix</h1>
         <input type="text" name="min">
@@ -38,6 +39,7 @@
             </tbody>
         </table>
     </div>
+    </main>
     <%@ include file="footer.jsp" %>
 </body>
 <style>

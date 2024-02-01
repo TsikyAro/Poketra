@@ -10,10 +10,6 @@
         <servlet-class>controleur.PosteControlleur</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>SalairePosteControlleur</servlet-name>
-        <servlet-class>controleur.SalairePosteControlleur</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>MatiereControleur</servlet-name>
         <servlet-class>controleur.MatiereControleur</servlet-class>
     </servlet>
@@ -85,6 +81,46 @@
         <servlet-name>ListeFinale</servlet-name>
         <servlet-class>controleur.ListeFinale</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>EMployeController</servlet-name>
+        <servlet-class>controleur.EMployeController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SalaireController</servlet-name>
+        <servlet-class>controleur.SalaireController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EmployeTauxController</servlet-name>
+        <servlet-class>controleur.EmployeTauxController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>StatistiqueController</servlet-name>
+        <servlet-class>controleur.StatistiqueController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ClientControlleur</servlet-name>
+        <servlet-class>controleur.ClientControlleur</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ValiderController</servlet-name>
+        <servlet-class>controleur.ValiderController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Reste_poketra</servlet-name>
+        <servlet-class>controleur.Reste_poketra</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ClientControlleur</servlet-name>
+        <url-pattern>/ClientControlleur</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>VenteControleur</servlet-name>
+        <servlet-class>controleur.VenteControleur</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VenteControleur</servlet-name>
+        <url-pattern>/VenteControleur</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ListeFinale</servlet-name>
         <url-pattern>/ListeFinale</url-pattern>
@@ -104,10 +140,6 @@
     <servlet-mapping>
         <servlet-name>PosteControlleur</servlet-name>
         <url-pattern>/PosteControlleur</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>SalairePosteControlleur</servlet-name>
-        <url-pattern>/SalairePosteControlleur</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>MatiereControleur</servlet-name>
@@ -180,6 +212,30 @@
     <servlet-mapping>
         <servlet-name>controle</servlet-name>
         <url-pattern>/controle</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EMployeController</servlet-name>
+        <url-pattern>/EMployeController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SalaireController</servlet-name>
+        <url-pattern>/SalaireController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EmployeTauxController</servlet-name>
+        <url-pattern>/EmployeTauxController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>StatistiqueController</servlet-name>
+        <url-pattern>/StatistiqueController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ValiderController</servlet-name>
+        <url-pattern>/ValiderController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Reste_poketra</servlet-name>
+        <url-pattern>/Reste_poketra</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

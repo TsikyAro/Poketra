@@ -85,6 +85,7 @@ public class LookMatiere {
             LookMatiere lM = new LookMatiere(id, look, matiere);
             array.add(lM);
         }
+        connexion.close();
         return array.toArray(new LookMatiere[array.size()]);
     }
     
@@ -100,6 +101,7 @@ public class LookMatiere {
             LookMatiere lM = new LookMatiere(id, look, matiere);
             array.add(lM);
         }
+        connexion.close();
         return array.toArray(new LookMatiere[array.size()]);
     }
     
@@ -110,6 +112,7 @@ public class LookMatiere {
             prepare.setInt(2, this.getIdLook());
             int trait = prepare.executeUpdate();
         }
+        connexion.close();
     }
     
 }

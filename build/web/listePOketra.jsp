@@ -10,6 +10,7 @@
  <%@include file="header.jsp"%>
  <body>
    <%@ include file="nav.jsp" %>
+   <main id="main" class="main">
     <form action="TrieControleur" method="get">
         <h1>Voir liste matiere selon les Look</h1>
         <p><select aria-placeholder="TypeLook" name="look">
@@ -45,6 +46,7 @@
             </tbody>
         </table>
     </div>
+   </main>
     <%@ include file="footer.jsp" %>
 </body>
 <style>

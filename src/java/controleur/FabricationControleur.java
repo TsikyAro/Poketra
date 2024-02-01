@@ -61,13 +61,14 @@ public class FabricationControleur extends HttpServlet {
             throws ServletException, IOException {
         int idPoketra = Integer.valueOf(request.getParameter("poketraMatiere"));
         double quantite = Double.valueOf(request.getParameter("quantite"));
+        Date dates = Date.valueOf(request.getParameter("date"));
         PrintWriter out = response.getWriter();
 //        out.println("Quatite insufisant "+request.getParameter("poketraMatiere"));  
         PoketraMatiere pm = new PoketraMatiere();
         Date date = new Date(2023, 12,12);
         try {
             PoketraMatiere[] poketraMatiere = pm.select(Connexion.connect(),idPoketra);
-            MatiereEnStock[] verification = pm.Verifier_stock_par_poketra(poketraMatiere, quantite);
+            MatiereEnStock[] verification = pm.Verifier_stock_par_poketra(poketraMatiere, quantite,dates);
             if(verification.length > 0){
                 for(int i = 0;i< verification.length;i++){
                     verification[i].setDate(date);

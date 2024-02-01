@@ -1,18 +1,15 @@
 package main;
 
+import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import model.Connexion;
+import model.Employe;
 
 public class Main {
-   public static void main(String[] args) {
-        String dateStr1 = "2022-01-01";
-        String dateStr2 = "2024-12-19";
-        Date date1 = parseDate(dateStr1);
-        Date date2 = parseDate(dateStr2);
-        int differenceAnnees = differenceEnAnnees(date1, date2);
-
-        System.out.println("La différence entre les deux dates est de " + differenceAnnees + " années.");
+   public static void main(String[] args) throws Exception {
+        Employe[] emp = new Employe().EmployeTaux(Connexion.connect());
     }
 
     // Fonction pour parser une chaîne de caractères en objet Date

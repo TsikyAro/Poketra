@@ -81,7 +81,7 @@
           </li>
           <li>
             <a href="MatiereEnStockControleur">
-              <i class="bi bi-circle"></i><span>Insertion Prix Matiere en Stock </span>
+              <i class="bi bi-circle"></i><span>Insertion Matiere en Stock </span>
             </a>
           </li>
         </ul>
@@ -130,23 +130,56 @@
             </a>
           </li>
           <li>
-            <a href="SalairePosteControlleur">
-              <i class="bi bi-circle"></i><span>Insertion Salaire par Poste</span>
+            <a href="Salaire.jsp">
+              <i class="bi bi-circle"></i><span>Insertion Salaire</span>
             </a>
           </li>
           <li>
-            <a href="PersonnePosteControleur">
-              <i class="bi bi-circle"></i><span>Insertion Poste Personne</span>
+            <a href="EMployeController">
+              <i class="bi bi-circle"></i><span>Insertion Nouveau Employe</span>
             </a>
           </li>
           <li>
-            <a href="controle">
-              <i class="bi bi-circle"></i><span>Voir Liste Personne POste</span>
+            <a href="EmployeTauxController">
+              <i class="bi bi-circle"></i><span>Voir Liste Personne Poste</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Charts Nav -->
+      </li><!-- End Components Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#charte" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-bar-chart"></i><span>Vente</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="charte" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="StatistiqueController">
+              <i class="bi bi-circle"></i><span>Statistique Vente</span>
             </a>
           </li>
           <li>
-            <a href="BeneficeController">
-              <i class="bi bi-circle"></i><span>Voir Benefice</span>
+            <a href="client.jsp">
+              <i class="bi bi-circle"></i><span>Insertion Client</span>
+            </a>
+          </li>
+          <li>
+            <a href="VenteControleur">
+              <i class="bi bi-circle"></i><span>Insertion  Vente</span>
+            </a>
+          </li>
+          <li>
+            <a href="EmployeTauxController">
+              <i class="bi bi-circle"></i><span>Voir Liste Personne Poste</span>
+            </a>
+          </li>
+          <li>
+            <a href="Reste_poketra">
+              <i class="bi bi-circle"></i><span>Voir Liste Stock Poketra</span>
+            </a>
+          </li>
+          <li>
+            <a href="ValiderController">
+              <i class="bi bi-circle"></i><span>Voir Liste Vente</span>
             </a>
           </li>
         </ul>

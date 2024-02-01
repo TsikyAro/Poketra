@@ -83,6 +83,7 @@ public class MatiereEnStock {
             prepare.setDate(3, this.getDate());
             int trait = prepare.executeUpdate();
         }
+        connexion.close();
     }
     public void insertSortie(Connection connexion) throws SQLException{
         String requete = "insert into sortie (idmatiere ,quantite, dates ) values(?, ?, ?)";
@@ -92,6 +93,7 @@ public class MatiereEnStock {
             prepare.setDate(3, this.getDate());
             int trait = prepare.executeUpdate();
         }
+        connexion.close();
     }
     
     

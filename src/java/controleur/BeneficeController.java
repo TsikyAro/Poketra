@@ -65,20 +65,11 @@ public class BeneficeController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        ArrayList<Benefice>  benefices = new ArrayList<Benefice>();
         try {
-            Poketra [] poketra = new Poketra().select(Connexion.connect());
-            for(int i =0; i< poketra.length;i++){
-                Benefice benefice = new Benefice().select(Connexion.connect(), poketra[i].getIdPoketra());
-                PoketraPrix poketraPrix = new PoketraPrix().select_byId(Connexion.connect(),poketra[i].getIdPoketra());
-                if(benefice!=null){
-                    benefice.calculeBenefice(benefice, poketraPrix);
-                    benefices.add(benefice);
-                System.out.println("benefice"+ benefice.getBenefice()+" nompoketra "+ benefice.getNomtype());
-                }
-                
-            }
-            request.setAttribute("poketra", benefices.toArray(new Benefice[benefices.size()]));
+            Benefice [] benefice = new Benefice().select(Connexion.connect());
+            request.setAttribute("poketra",benefice);
+            PrintWriter out = response.getWriter();
+            out.println(benefice.length);
             RequestDispatcher dispatch = request.getRequestDispatcher("Benefice.jsp");
             dispatch.forward(request, response);
         } catch (Exception ex) {
@@ -94,20 +85,8 @@ public class BeneficeController extends HttpServlet {
         double max = Double.valueOf(request.getParameter("max"));
         ArrayList<Benefice>  benefices = new ArrayList<Benefice>();
         try {
-            Poketra [] poketra = new Poketra().select(Connexion.connect());
-            for(int i =0; i< poketra.length;i++){
-                Benefice benefice = new Benefice().select(Connexion.connect(), poketra[i].getIdPoketra());
-                PoketraPrix poketraPrix = new PoketraPrix().select_byId(Connexion.connect(),poketra[i].getIdPoketra());
-                if(benefice!=null){
-                    benefice.calculeBenefice(benefice, poketraPrix);
-                    if(benefice.getBenefice()>= min && benefice.getBenefice()<= max){
-                         benefices.add(benefice);
-                    }
-                System.out.println("benefice"+ benefice.getBenefice()+" nompoketra "+ benefice.getNomtype());
-                }
-                
-            }
-            request.setAttribute("poketra", benefices.toArray(new Benefice[benefices.size()]));
+            Benefice [] benefice = new Benefice().select(Connexion.connect(),min,max);
+            request.setAttribute("poketra",benefice);
             RequestDispatcher dispatch = request.getRequestDispatcher("Benefice.jsp");
             dispatch.forward(request, response);
         } catch (Exception ex) {

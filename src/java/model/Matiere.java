@@ -51,6 +51,7 @@ public class Matiere {
             prepare.setString(1, this.getNomMatiere());
             int trait = prepare.executeUpdate();
         }
+        connexion.close();
     }
     
     public Matiere[] select(Connection connexion) throws SQLException{
@@ -64,6 +65,7 @@ public class Matiere {
             Matiere m = new Matiere(id, nom);
             array.add(m);
         }
+        connexion.close();
         return array.toArray(new Matiere[array.size()]);
     }
 }

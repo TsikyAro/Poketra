@@ -7,6 +7,7 @@
  <%@ include file="header.jsp" %>
 <body>
     <%@ include file="nav.jsp" %>
+     <main id="main" class="main">
     <form action="BeneficeController" method="post">
         <h1>Trier par prix</h1>
         <input type="text" name="min">
@@ -22,9 +23,11 @@
             </thead>
             <tbody>
                 <%  if(prixPoketra!=null){
+                    
                     for(int i=0 ; i< prixPoketra.length ; i++){%>
+    
                 <tr>
-                    <td><%= prixPoketra[i].getNomtype()%></td>
+                    <td>Poketra<%= prixPoketra[i].getIdpoketra()%></td>
                     <td><%= prixPoketra[i].getBenefice() %></td>
                 </tr>
                 <% }
@@ -33,6 +36,7 @@
             </tbody>
         </table>
     </div>
+     </main>
 </body>
 <%@ include file="footer.jsp" %>
 <style>
